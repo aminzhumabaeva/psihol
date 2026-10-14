@@ -1,0 +1,530 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: #794965;
+    --accent-light: #f4edf2;
+    --text: #29262b;
+    --muted: #777078;
+    --line: #e1d9df;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 24px 12px;
+    background: #e9e7e9;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.page {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    padding: 17mm 18mm 20mm;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.12);
+    page-break-after: always;
+    break-after: page;
+}
+
+.number {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0 0 20px;
+    color: var(--accent);
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    margin: 14px 0 7px;
+    color: var(--accent);
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+p {
+    margin: 0 0 12px;
+}
+
+.lead {
+    margin-bottom: 18px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.content img {
+    display: block;
+    width: 100%;
+    height: 158mm;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+ul,
+ol {
+    margin: 8px 0 14px;
+    padding-left: 24px;
+}
+
+li {
+    margin-bottom: 8px;
+    padding-left: 2px;
+}
+
+.note {
+    margin-top: 16px;
+    padding: 13px 15px;
+    border-left: 5px solid var(--accent);
+    border-radius: 0 9px 9px 0;
+    background: var(--accent-light);
+    font-size: 16px;
+}
+
+.contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 18px;
+    margin: 10px 0 15px;
+}
+
+.contents div {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.contents b {
+    min-width: 27px;
+    color: var(--accent);
+}
+
+.wide-photo {
+    display: block;
+    width: 100%;
+    height: 72mm;
+    margin: 14px 0 10px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.caption {
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.cards article {
+    padding: 13px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #ffffff;
+}
+
+.cards h2 {
+    margin-top: 5px;
+}
+
+.cards p {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.card-number {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.strategy {
+    margin: 10px 0;
+    padding: 10px 14px;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    background: #f8f5f7;
+}
+
+.strategy h2 {
+    margin: 0 0 4px;
+    font-size: 18px;
+}
+
+.strategy p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.short-photo {
+    height: 54mm;
+}
+
+.behavior {
+    margin-bottom: 14px;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.behavior h2 {
+    margin-top: 0;
+}
+
+.behavior p:last-child {
+    margin-bottom: 0;
+}
+
+.aggressive {
+    border-left: 4px solid #a84f59;
+    background: #f8eded;
+}
+
+.passive {
+    border-left: 4px solid #79739b;
+    background: #f1f0f7;
+}
+
+.example {
+    margin-top: 15px;
+    padding: 13px;
+    border-radius: 9px;
+    background: var(--accent-light);
+    font-size: 15px;
+}
+
+.steps {
+    margin: 12px 0 16px;
+}
+
+.steps > div {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 10px;
+}
+
+.steps > div > b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    font-size: 17px;
+}
+
+.steps p {
+    margin: 2px 0 0;
+}
+
+.conclusion-content {
+    margin-top: 10px;
+}
+
+.conclusion-content img {
+    height: 85mm;
+}
+
+.sources li {
+    margin-bottom: 16px;
+    padding-left: 4px;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+a {
+    color: var(--accent);
+    overflow-wrap: anywhere;
+}
+
+.closing-photo {
+    height: 68mm;
+    margin-top: 18px;
+}
+
+.thanks {
+    margin-top: 17px;
+    padding: 14px;
+    border-radius: 10px;
+    background: var(--accent-light);
+    text-align: center;
+}
+
+.thanks h2 {
+    margin: 0 0 5px;
+    font-size: 25px;
+}
+
+.thanks p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+footer {
+    position: absolute;
+    right: 18mm;
+    bottom: 7mm;
+    left: 18mm;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+}
+
+/* Адаптация для телефона и небольшого экрана */
+@media screen and (max-width: 800px) {
+    body {
+        padding: 8px;
+    }
+
+    .presentation {
+        gap: 14px;
+    }
+
+    .page {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 25px 20px 65px;
+        overflow: visible;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .content img {
+        height: 300px;
+    }
+
+    .contents,
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .wide-photo,
+    .short-photo,
+    .closing-photo {
+        height: 240px;
+    }
+
+    footer {
+        right: 20px;
+        bottom: 15px;
+        left: 20px;
+    }
+}
+
+/* Печать на листах A4 */
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+@media print {
+    html,
+    body {
+        width: 210mm;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .presentation {
+        display: block;
+        gap: 0;
+    }
+
+    .page {
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 15mm 17mm 19mm;
+        overflow: hidden;
+        border: none;
+        box-shadow: none;
+        page-break-after: always;
+        break-after: page;
+    }
+
+    .page:last-child {
+        page-break-after: auto;
+        break-after: auto;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    body {
+        font-size: 15px;
+        line-height: 1.36;
+    }
+
+    .lead {
+        font-size: 18px;
+    }
+
+    p {
+        margin-bottom: 8px;
+    }
+
+    li {
+        margin-bottom: 6px;
+    }
+
+    .content {
+        gap: 15px;
+    }
+
+    .content img {
+        height: 145mm;
+    }
+
+    .note {
+        margin-top: 10px;
+        padding: 9px 11px;
+        font-size: 14px;
+    }
+
+    .contents div {
+        padding: 7px 0;
+        font-size: 13px;
+    }
+
+    .wide-photo {
+        height: 62mm;
+        margin: 10px 0 7px;
+    }
+
+    .cards {
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .cards article {
+        padding: 9px;
+    }
+
+    .cards p,
+    .strategy p {
+        font-size: 13px;
+    }
+
+    .strategy {
+        margin: 7px 0;
+        padding: 8px 10px;
+    }
+
+    .strategy h2 {
+        font-size: 16px;
+    }
+
+    .behavior {
+        margin-bottom: 9px;
+        padding: 9px;
+    }
+
+    .example {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .steps > div {
+        margin-bottom: 7px;
+    }
+
+    .steps p {
+        font-size: 13px;
+    }
+
+    .conclusion-content img {
+        height: 75mm;
+    }
+
+    .sources li {
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .closing-photo {
+        height: 55mm;
+    }
+
+    .thanks {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .thanks h2 {
+        font-size: 21px;
+    }
+
+    footer {
+        right: 17mm;
+        bottom: 7mm;
+        left: 17mm;
+    }
+}
